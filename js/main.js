@@ -2,21 +2,23 @@ async function prayerTimes() {
     try {
       const response = await fetch("https://api.aladhan.com/v1/calendar/2023/12?latitude=52.0907006&longitude=-5.1215634&method=2");
       const times = await response.json();
-      console.log(times);
+      console.log(times.data[0]);
   
-      console.log('Fajr time:', times.data[0].timings.Fajr);
+    //   console.log('Fajr time:', times.data[0].timings.Fajr);
   
     
       const prayerTimesContainer = document.getElementById('prayer-times-container');
       prayerTimesContainer.innerHTML = ''; 
   
-      times.data.forEach(day => {
-        const date = day.date.readable;
-        const fajr = day.timings.Fajr;
-        const dhuhr = day.timings.Dhuhr;
-        const asr = day.timings.Asr;
-        const maghrib = day.timings.Maghrib;
-        const isha = day.timings.Isha;
+
+      console.log(times.data[0]);
+    //   times.data[0].forEach(day => {
+        const date = times.data[0].date.readable;
+        const fajr = times.data[0].timings.Fajr;
+        const dhuhr = times.data[0].timings.Dhuhr;
+        const asr = times.data[0].timings.Asr;
+        const maghrib = times.data[0].timings.Maghrib;
+        const isha = times.data[0].timings.Isha;
   
     
         prayerTimesContainer.innerHTML += `
@@ -28,7 +30,7 @@ async function prayerTimes() {
             <p>Isha: ${isha}</p>
           </div>
         `;
-      });
+    //   });
     } catch (error) {
       console.error('Er is een fout opgetreden bij het ophalen van de gegevens:', error);
     }
@@ -36,6 +38,27 @@ async function prayerTimes() {
   
   prayerTimes();
 
+  function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
 
-  
+    hours = padZero(hours);
+    minutes = padZero(minutes);
+    seconds = padZero(seconds);
+
+    var formattedTime = hours + ':' + minutes + ':' + seconds;
+
+    document.getElementById('clock').textContent = formattedTime;
+
+    setTimeout(updateClock, 1000);
+}
+
+function padZero(number) {
+    return (number < 10 ? '0' : '') + number;
+}
+
+updateClock();
+
   
