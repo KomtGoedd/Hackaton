@@ -1,16 +1,101 @@
+
 body {
-
-    background-color: darkgray;
+    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
-
 
 h1 {
-
     text-align: center;
+    color: #370fca;
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
+
 
 #clock {
-
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
+    color: #370fca;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
 }
+
+
+#prayer-times-container, #prayer-times-container-2 {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+
+#prayer-times-container div, #prayer-times-container-2 div {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px;
+    text-align: center;
+}
+
+#prayer-times-container div:last-child, #prayer-times-container-2 div:last-child {
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none;
+    color: #370fca;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+#date {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+body {
+    background-image: url('img/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+p {
+color: rgb(13, 205, 9);
+font-size: 30px;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.timer {
+position: absolute;
+    height: 300px;
+    width: 900px;
+    top: 70%;
+    right: 30%;
+   border-radius: 6%;
+    background-color: whitesmoke;
+}
+
