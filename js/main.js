@@ -21,7 +21,6 @@ async function prayerTimes() {
     
         prayerTimesContainer.innerHTML += `
           <div>
-            <p>Date: ${date}</p>
             <p>Fajr: ${fajr}</p>
             <p>Dhuhr: ${dhuhr}</p>
             <p>Asr: ${asr}</p>
@@ -36,4 +35,7 @@ async function prayerTimes() {
   }
   
   prayerTimes();
+
+
+  
   
