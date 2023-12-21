@@ -103,3 +103,6 @@ async function prayerTimesAms() {
   }
   
   prayerTimesAms();
+
+ const date = new Date();
+document.getElementById("date").innerHTML = date;
