@@ -90,11 +90,22 @@ h2 {
 }
 
 .timer {
+    position: absolute;
+        height: 165px;
+        width: 600px;
+        top: 83%;
+        right: 35%;
+       border-radius: 6%;
+        background-color: whitesmoke;
+    }
+    
+
+.timer2 {
 position: absolute;
-    height: 300px;
-    width: 900px;
-    top: 70%;
-    right: 30%;
+    height: 165px;
+    width: 600px;
+    top: 83%;
+    right: 35%;
    border-radius: 6%;
     background-color: whitesmoke;
 }
